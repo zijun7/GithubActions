@@ -30,6 +30,14 @@ namespace GithubActionsLab
             Assert.Throws<ArgumentNullException>(() => Program.Add(null, null));
         }
 
+        [Test]
+        public void Subtract_Valid()
+        {
+            Assert.AreEqual(1, Program.Subtract("1", "2"));
+            Assert.AreEqual(1, Program.Subtract("3", "2"));
+            Assert.AreEqual(-2, Program.Subtract("5", "7"));
+        }
+
         // Implement 3 tests per operation, following a similar pattern as above
     }
 }
